@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+xmlns:tools="http://schemas.android.com/tools"
+android:layout_width="match_parent"
+android:layout_height="wrap_content"
+android:layout_margin="4dp"
+    >
+<LinearLayout
+    android:background="@drawable/btn_item_grid_marca"
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="fill_parent"
+    android:padding="10dp">
+
+  <ImageView
+      android:id="@+id/ivModelo"
+      android:layout_width="100dp"
+      android:layout_height="100dp"
+      android:src="@drawable/common_google_signin_btn_icon_dark"
+     />
+
+  <!--<TextView
+      android:fontFamily="@font/lato"
+      android:id="@+id/tvDescripcion"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:text="@string/example_item_modelo"
+      android:gravity="center_horizontal"
+      android:textSize="@dimen/a12dp"
+      android:layout_gravity="center"
+      android:textColor="@color/azul_drawer"
+      android:layout_marginTop="@dimen/a8dp"
+      tools:ignore="SpUsage" />-->
+
+  <androidx.appcompat.widget.AppCompatTextView
+      android:id="@+id/item_latitud"
+      android:layout_width="70dp"
+      android:layout_height="wrap_content"
+      android:gravity="center"
+      android:padding="3dp"
+      android:textColor="@color/background"
+      android:textSize="14sp"
+      android:textStyle="bold"
+      tools:text="title"
+      android:layout_gravity="center"/>
+
+  <androidx.appcompat.widget.AppCompatTextView
+      android:id="@+id/item_longitud"
+      android:layout_width="70dp"
+      android:layout_height="wrap_content"
+      android:gravity="center"
+      android:padding="3dp"
+      android:textColor="@color/background"
+      android:textSize="14sp"
+      android:textStyle="bold"
+      tools:text="title"
+      android:layout_gravity="center"/>
+
+  <androidx.appcompat.widget.AppCompatTextView
+      android:id="@+id/item_fecha"
+      android:layout_width="100dp"
+      android:layout_height="wrap_content"
+      android:gravity="center"
+      android:padding="3dp"
+      android:textColor="@color/background"
+      android:textSize="14sp"
+      android:textStyle="bold"
+      tools:text="title"
+      android:layout_gravity="center"/>
+
+</LinearLayout>
+
+</androidx.cardview.widget.CardView>
