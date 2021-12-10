@@ -2,6 +2,15 @@ apply plugin: 'com.android.application'
 apply plugin: 'kotlin-android'
 apply plugin: 'kotlin-android-extensions'
 apply plugin: 'kotlin-kapt'
+apply plugin: 'com.google.gms.google-services'
+
+/*plugins {
+    id 'com.android.application'
+    id 'kotlin-android'
+    id 'kotlin-android-extensions'
+    id 'kotlin-kapt'
+    //id 'com.google.android.libraries.mapsplatform.secrets-gradle-plugin'
+}*/
 
 def getProperty(String filename, String propName) {
     def propsFile = rootProject.file(filename)
@@ -31,6 +40,8 @@ android {
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
         buildConfigField "String", "TMDB_API_KEY", "\"${getProperty("local.properties", "tmdb_api_key")}\""
+
+        multiDexEnabled true
     }
 
     buildTypes {
@@ -119,6 +130,20 @@ dependencies {
 
     // custom view
     implementation "com.ms-square:expandableTextView:$expandableTextViewVersion"
+
+    //firebase
+    implementation platform('com.google.firebase:firebase-bom:29.0.1')
+    implementation 'com.google.firebase:firebase-analytics'
+    implementation 'com.google.firebase:firebase-firestore-ktx'
+    implementation "com.google.firebase:firebase-storage-ktx:20.0.0"
+    implementation 'com.firebaseui:firebase-ui-storage:8.0.0'
+
+    //maps
+    implementation 'com.google.android.gms:play-services-maps:17.0.1'
+    implementation 'com.google.android.libraries.places:places:2.5.0'
+
+    //corutinas
+    implementation 'org.jetbrains.kotlinx:kotlinx-coroutines-core:1.4.2'
 
     // unit test
     testImplementation "junit:junit:$junitVersion"

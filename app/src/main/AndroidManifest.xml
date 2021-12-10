@@ -5,6 +5,12 @@
     package="com.example.examen">
 
     <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
+    <uses-permission android:name="android.permission.CAMERA"/>
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
 
     <application
         android:name=".TheMoviesApplication"
@@ -31,7 +37,28 @@
             android:name=".view.ui.details.tv.TvDetailActivity"
             android:theme="@style/DetailTheme" />
 
-        <!---<activity android:name=".view.ui.details.person.PersonDetailActivity" />-->
+        <activity
+            android:name=".view.ui.firebase.UbicationActivity"
+            android:theme="@style/DetailTheme" />
+
+        <activity
+            android:name=".view.ui.firebase.ReportUbicationActivity"
+            android:theme="@style/DetailTheme"
+            />
+
+        <activity
+            android:name=".view.ui.firebase.GaleriaActivity"
+            android:theme="@style/DetailTheme"
+            />
+
+        <meta-data
+            android:name="com.google.android.gms.version"
+            android:value="@integer/google_play_services_version" />
+
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="AIzaSyA8Uvw2k2Mrum8KwTI8uSJg2obEIo7zd48" />
+
 
     </application>
 

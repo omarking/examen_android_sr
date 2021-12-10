@@ -4,7 +4,7 @@ buildscript {
     ext {
         // sdk and tools
         compileSdkVersion = 29
-        minSdkVersion = 16
+        minSdkVersion = 21
         targetSdkVersion = 29
 
         // application versions
@@ -67,6 +67,7 @@ buildscript {
     repositories {
         google()
         jcenter()
+       // mavenCentral()
     }
 
 
@@ -80,6 +81,8 @@ buildscript {
         classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
         classpath "com.diffplug.spotless:spotless-plugin-gradle:$spotlessVersion"
         classpath "org.jacoco:org.jacoco.core:$jacocoVersion"
+        classpath "com.google.android.libraries.mapsplatform.secrets-gradle-plugin:secrets-gradle-plugin:2.0.0"
+        classpath 'com.google.gms:google-services:4.2.0'
         // NOTE: Do not place your application dependencies here; they belong
         // in the individual module build.gradle files
     }
@@ -87,7 +90,11 @@ buildscript {
 
 allprojects {
     repositories {
-        google()
+        /*maven {
+            url 'https://maven.google.com'
+        }
+        mavenCentral()
+        */google()
         jcenter()
     }
 }
